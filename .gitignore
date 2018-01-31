@@ -1,6 +1,8 @@
 
 src/environments/environment.prod.ts
 src/environments/environment.ts
+*.stackdump
+vim.exe.stackdump
 
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
@@ -11,7 +13,7 @@ GoogleService-Info.bin
 google-services.json
 .firebaserc
 
-*.stackdump
+
 
 *~
 *.sw[mnpcod]
