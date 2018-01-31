@@ -1,8 +1,8 @@
-# Intro
+
 
 <p align="center">
-  <h1 align="center">AngularFire</h1>
-  <p align="center">The official library for Firebase and Angular</p>
+  <h1 align="center">AngularCrud</h1>
+  <p align="center">The official library for AngularCrud</p>
 </p>
 
 [![Build Status](https://travis-ci.org/angular/angularfire2.svg?branch=master)](https://travis-ci.org/angular/angularfire2) [![Join the chat at https://gitter.im/angular/angularfire2](https://badges.gitter.im/angular/angularfire2.svg)](https://gitter.im/angular/angularfire2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
