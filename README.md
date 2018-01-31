@@ -1,3 +1,15 @@
+# Intro
+
+Status: Release candidate
+
+What is AngularCrud?
+Observable based - Use the power of RxJS, Angular, and Firebase.
+Realtime bindings - Synchronize data in realtime.
+Authentication - Log users in with a variety of providers and monitor authentication state in realtime.
+Offline Data - Store data offline automatically with AngularFirestore.
+ngrx friendly - Integrate with ngrx using AngularFire's action based APIs.
+
+
 # Angular5firebasecrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.1.
