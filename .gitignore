@@ -11,7 +11,7 @@ GoogleService-Info.bin
 google-services.json
 .firebaserc
 
-vim.exe.stackdump
+*.stackdump
 
 *~
 *.sw[mnpcod]
