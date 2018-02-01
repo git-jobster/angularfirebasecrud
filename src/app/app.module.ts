@@ -7,6 +7,7 @@ import { FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { UserProfileComponent} from './user-profile/user-profile.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employees/employee/employee.component';
 import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './/app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
+    UserProfileComponent,
     EmployeesComponent,
     EmployeeComponent,
     GoogleMapComponent,
