@@ -14,6 +14,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { AgmCoreModule } from '@agm/core';
 import { GeoService } from './geo.service';
 import { GoogleMapComponent } from './google-map/google-map.component';
+import { CoreModule } from './core/core.module';
+import { AppRoutingModule } from './/app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -28,11 +31,14 @@ import { GoogleMapComponent } from './google-map/google-map.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
+    CoreModule,
     ToastrModule.forRoot(),
 
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapsKey
-    })
+    }),
+
+    AppRoutingModule
   ],
   providers: [GeoService],
   bootstrap: [AppComponent]
