@@ -4,7 +4,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormsModule} from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { UserProfileComponent} from './user-profile/user-profile.component';
@@ -16,7 +15,7 @@ import { AgmCoreModule } from '@agm/core';
 import { GeoService } from './geo.service';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { CoreModule } from './core/core.module';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -35,7 +34,6 @@ import { AppRoutingModule } from './/app-routing.module';
     FormsModule,
     CoreModule,
     ToastrModule.forRoot(),
-
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapsKey
     }),

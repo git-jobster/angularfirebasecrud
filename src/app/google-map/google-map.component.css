@@ -1,3 +1,7 @@
 agm-map {
-    height: 300px;
+    height: 600px;
+    }
+
+agm-marker {
+    height: 600px;
     }
