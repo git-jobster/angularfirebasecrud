@@ -37,6 +37,7 @@ import { GeoService } from '../geo.service'
 export class GoogleMapComponent implements OnInit, OnDestroy {
   lat: number;
   lng: number;
+  zoom: number;
   markers: any;
   subscription: any;
   constructor(private geo: GeoService) { }
