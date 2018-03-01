@@ -29,7 +29,7 @@ import { GeoService } from '../geo.service'
 @Component({
   selector: 'google-map',
   templateUrl: './google-map.component.html',
-  styleUrls: ['./google-map.component.scss']
+  styleUrls: ['./google-map.component.css']
 })
 
 
@@ -71,7 +71,7 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
       navigator.geolocation.getCurrentPosition(position => {
        this.lat = position.coords.latitude;
        this.lng = position.coords.longitude;
-       this.geo.getLocations(10000, [this.lat, this.lng])
+       this.geo.getLocations(50, [this.lat, this.lng])
      });
    }
  }
