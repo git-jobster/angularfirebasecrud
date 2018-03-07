@@ -7,6 +7,7 @@ export class GeoService {
   dbRef: any;
   geoFire: any;
   hits = new BehaviorSubject([])
+  
   constructor(private db: AngularFireDatabase) {
     /// Reference database location for GeoFire
     this.dbRef = this.db.list('/locations');

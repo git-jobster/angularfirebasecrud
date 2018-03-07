@@ -2,25 +2,159 @@
 
 <div *ngIf="lat && lng">
 
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="12">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="12" [styles]='[
+{
+    "featureType": "administrative",
+    "elementType": "all",
+    "stylers": [
+        {
+            "saturation": "-100"
+        }
+    ]
+},
+{
+    "featureType": "administrative.province",
+    "elementType": "all",
+    "stylers": [
+        {
+            "visibility": "off"
+        }
+    ]
+},
+{
+    "featureType": "landscape",
+    "elementType": "all",
+    "stylers": [
+        {
+            "saturation": -100
+        },
+        {
+            "lightness": 65
+        },
+        {
+            "visibility": "on"
+        }
+    ]
+},
+{
+    "featureType": "poi",
+    "elementType": "all",
+    "stylers": [
+        {
+            "saturation": -100
+        },
+        {
+            "lightness": "50"
+        },
+        {
+            "visibility": "simplified"
+        }
+    ]
+},
+{
+    "featureType": "road",
+    "elementType": "all",
+    "stylers": [
+        {
+            "saturation": "-100"
+        }
+    ]
+},
+{
+    "featureType": "road.highway",
+    "elementType": "all",
+    "stylers": [
+        {
+            "visibility": "simplified"
+        }
+    ]
+},
+{
+    "featureType": "road.arterial",
+    "elementType": "all",
+    "stylers": [
+        {
+            "lightness": "30"
+        }
+    ]
+},
+{
+    "featureType": "road.local",
+    "elementType": "all",
+    "stylers": [
+        {
+            "lightness": "40"
+        }
+    ]
+},
+{
+    "featureType": "transit",
+    "elementType": "all",
+    "stylers": [
+        {
+            "saturation": -100
+        },
+        {
+            "visibility": "simplified"
+        }
+    ]
+},
+{
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+        {
+            "hue": "#ffff00"
+        },
+        {
+            "lightness": -25
+        },
+        {
+            "saturation": -97
+        }
+    ]
+},
+{
+    "featureType": "water",
+    "elementType": "labels",
+    "stylers": [
+        {
+            "lightness": -25
+        },
+        {
+            "saturation": -100
+        }
+    ]
+}
+]'>
+
+
+
+
+
+
 
     <agm-marker [latitude]="lat" [longitude]="lng">
 
-      <agm-info-window>
+    <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+
         <h3><strong>Howdy!</strong></h3>
         <p>You are here!</p>
-      </agm-info-window>
 
-    </agm-marker>
+    </agm-snazzy-info-window>
 
-    <agm-marker *ngFor="let marker of markers"
+</agm-marker>
+
+<agm-marker *ngFor="let marker of markers"
     [latitude]="marker.location[0]"
     [longitude]="marker.location[1]"
     [iconUrl]="'https://cdn0.iconfinder.com/data/icons/social-media-2092/100/social-46-24.png'">
-    <agm-info-window>
+
+    <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
       <h3><strong>Location Details</strong></h3>
       <p>You are {{ marker.distance }} kilometers from this point</p>
-    </agm-info-window>
+  </agm-snazzy-info-window>
+
 </agm-marker>
 
   </agm-map>

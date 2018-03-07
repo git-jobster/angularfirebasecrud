@@ -16,7 +16,8 @@ import { GeoService } from './geo.service';
 import { GoogleMapComponent } from './google-map/google-map.component';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
-
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+import { Server } from 'selenium-webdriver/safari';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapsKey
     }),
-
+    AgmSnazzyInfoWindowModule,
     AppRoutingModule
   ],
   providers: [GeoService],

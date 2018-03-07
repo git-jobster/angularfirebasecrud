@@ -26,6 +26,8 @@ export class GoogleMapComponent implements OnInit {
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { GeoService } from '../geo.service'
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+
 @Component({
   selector: 'google-map',
   templateUrl: './google-map.component.html',
@@ -50,20 +52,20 @@ export class GoogleMapComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe()
   }
    //seed the database
-   private seedDatabase() {
-    let dummyPoints = [
-      [36.9, 174.1],
-      [36.9, 174.2],
-      [36.9, 174.3],
-      [36.9, 174.0],
-      [36.9, 174.1]
-    ]
-    dummyPoints.forEach((val, idx) => {
-      let name = `dummy-location-${idx}`
-      console.log(idx)
-      this.geo.setLocation(name, val)
-    })
-  }
+  //  private seedDatabase() {
+  //   let dummyPoints = [
+  //     [36.9, 174.1],
+  //     [36.9, 174.2],
+  //     [36.9, 174.3],
+  //     [36.9, 174.0],
+  //     [36.9, 174.1]
+  //   ]
+  //   dummyPoints.forEach((val, idx) => {
+  //     let name = `dummy-location-${idx}`
+  //     console.log(idx)
+  //     this.geo.setLocation(name, val)
+  //   })
+  // }
     
   
   private getUserLocation() {
