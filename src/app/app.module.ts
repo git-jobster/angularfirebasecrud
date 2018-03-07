@@ -36,7 +36,8 @@ import { Server } from 'selenium-webdriver/safari';
     CoreModule,
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: environment.googleMapsKey
+      apiKey: environment.googleMapsKey,
+      apiVersion: environment.apiVersion
     }),
     AgmSnazzyInfoWindowModule,
     AppRoutingModule
